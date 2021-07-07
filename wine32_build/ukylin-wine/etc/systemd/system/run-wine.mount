@@ -1,0 +1,14 @@
+[Unit]
+Description=Wine package mount
+ConditionPathExists=/usr/share/wine/wine.squashfs
+Before=umount.target
+After=basic.target systemd-tmpfiles-setup.service NetworkManager-wait-online.service
+
+[Mount]
+What=/usr/share/wine/wine.squashfs
+Where=/run/wine
+Type=squashfs
+Options=loop
+
+[Install]
+WantedBy=local-fs.target

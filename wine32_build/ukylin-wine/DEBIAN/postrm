@@ -1,0 +1,7 @@
+#!/bin/sh
+
+rm -rf /usr/bin/ukylin-wine
+if [ -L /lib/ld-linux.so.2 ] && [ ! -f /lib/ld-linux.so.2 ]; then
+    rm -rf /lib/ld-linux.so.2
+fi
+

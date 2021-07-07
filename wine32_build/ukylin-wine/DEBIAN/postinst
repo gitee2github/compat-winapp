@@ -1,0 +1,14 @@
+#!/bin/sh
+
+systemctl enable /etc/systemd/system/run-wine.mount
+systemd-tmpfiles --create /usr/lib/tmpfiles.d/run-wine.conf
+#systemd-mount /etc/systemd/system/run-wine.mount
+mount /usr/share/wine/wine.squashfs /run/wine
+
+ln -s /run/wine/AppRun /usr/bin/ukylin-wine
+if [ ! -f /lib/ld-linux.so.2 ]; then
+    rm -rf /lib/ld-linux.so.2
+fi
+if [ ! -L /lib/ld-linux.so.2 ]; then
+    ln -s /run/wine/lib/ld-linux.so.2 /lib/ld-linux.so.2
+fi
