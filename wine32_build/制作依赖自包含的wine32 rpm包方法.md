@@ -11,7 +11,7 @@
 ## 制作 ukylin-wine deb包流程
 
 ### (1) 编译 wine 源码
-	```
+
 	$ cd wine-source-dir
 	$ mkdir wine32
 	$ cd wine32
@@ -20,24 +20,24 @@
 	```
 
 ### (2) 制作 wine.deb 包
-	```
+
 	$ cd ../deb-package/
 	$ dpkg -b debwine-i386.deb wine.deb
 	```
 
 ### (3) 制作 wine.squashfs
 	*注意：* 由于制作 squashfs 自依赖包需要先将wine的相关依赖包都下载到本地，如果系统中已经安装过wine的相关包或依赖包会导致依赖下载不全，所以制作环境最好是新安装的操作系统。
-	```
+
 	$ cd makeappimage
 	$ sudo ./kylinos-makesquashfs.sh ../wine.deb
 	$ cd ..
-	```
+
 	制作完成后生成 wine.squashfs 文件。
 
 ### (4) 编辑 ukylin-wine.spec 文件，生成rpm
-	```
+
 	rpm -bb SPEC/ukylin-wine.spec
-	```
+	
 
 至此，ukylin-wine rpm包制作完成。
 
@@ -58,3 +58,5 @@
 
     wine WeChatSetup.exe
     wine 安装微信安装包 
+
+    启动微信，点击桌面微信图标可以启动微信。
