@@ -1,30 +1,20 @@
 # compat-winapp
 
 #### 介绍
-Issue report and discussion entry repo for compat-winapp SIG
+本仓库主要用于compat-winapp SIG组问题报告和讨论。
 
 #### 软件架构
-软件架构说明
+目前本仓库上传了基于OpenEuler X86系统制作wine32自依赖RPM安装包的方法和制作的相关文件，并附有制作好的安装包下载地址，欢迎大家研究和尝试使用，详情请看
+ [wine32自依赖包制作方法](https://gitee.com/liangkeming/compat-winapp/blob/master/wine32_build/%E5%88%B6%E4%BD%9C%E4%BE%9D%E8%B5%96%E8%87%AA%E5%8C%85%E5%90%AB%E7%9A%84wine32%20rpm%E5%8C%85%E6%96%B9%E6%B3%95.md)
 
 
-#### 安装教程
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
-
-#### 使用说明
-
-1.  xxxx
-2.  xxxx
-3.  xxxx
 
 #### 参与贡献
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+1.  大家可以尝试使用wine32包，并安装相关windows软件（如微信），可以在此仓库issue中报告遇到的bug。 
+2.  如果对wine32 自依赖安装包的构建感兴趣，可以参考《制作依赖自包含的wine32 rpm包方法.md》,并可以提出相关问题讨论。
+3.  如果对wine bug修复感兴趣，并有能力修复，请在issue 中提出相关问题，并上传修复方法或修复patch。
+4.  欢迎大家尝试，并参与贡献。
 
 
 #### 特技
